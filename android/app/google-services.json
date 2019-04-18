@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "322768007891",
+    "firebase_url": "https://alcancia-flutter.firebaseio.com",
+    "project_id": "alcancia-flutter",
+    "storage_bucket": "alcancia-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322768007891:android:bb7e124c101809a5",
+        "android_client_info": {
+          "package_name": "com.andrestorres.alcancia_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322768007891-umcbn24it8ma579flkn5abb26hsd5nqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGoxilatmqWsajmZFUgVvBRSfKFDOghqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322768007891-umcbn24it8ma579flkn5abb26hsd5nqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322768007891-utt74ku6vpntk0311lkdskbj7eb42d09.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.andrestorres.alcanciaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
