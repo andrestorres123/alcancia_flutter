@@ -5,26 +5,29 @@
 // gestures. You can also use WidgetTester to find child presentation.sections.checklist.widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:alcancia_flutter/presentation/sections/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:alcancia_flutter/di/di_config.dart';
 import 'package:alcancia_flutter/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  testWidgets('If email is empty show error', (WidgetTester tester) async {
+    configureTestDI();
+    await tester.pumpWidget(new MaterialApp(
+      home: LoginPage(),
+    ));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.enterText(find.byKey(Key('emailKey')), '');
+    await tester.enterText(find.byKey(Key('passwordKey')), '');
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    TextFormField emailTextField = tester.widget(find.byKey(Key('emailKey')));
+    TextFormField passwordTextField =
+        tester.widget(find.byKey(Key('passwordKey')));
+    await tester.tap(find.byKey(Key('loginBtn')));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(emailTextField.validator, isNotNull);
+    expect(passwordTextField.validator, isNotNull);
   });
 }
