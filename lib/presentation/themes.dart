@@ -20,6 +20,10 @@ ThemeData _buildLightTheme() {
       buttonColor: primaryColor,
       scaffoldBackgroundColor: AlcanciaColors.lightGrey,
       backgroundColor: AlcanciaColors.lightGrey,
+      iconTheme: IconThemeData(color: AlcanciaColors.green),
+      appBarTheme: AppBarTheme(
+          color: AlcanciaColors.grey,
+          iconTheme: IconThemeData(color: Colors.white)),
       errorColor: Colors.red,
       buttonTheme: ButtonThemeData(
           colorScheme: colorScheme, textTheme: ButtonTextTheme.primary));

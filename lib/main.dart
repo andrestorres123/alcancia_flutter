@@ -1,6 +1,7 @@
 import 'package:alcancia_flutter/di/di_config.dart';
 import 'package:alcancia_flutter/domain/blocs/bloc_provider.dart';
 import 'package:alcancia_flutter/domain/blocs/user_bloc.dart';
+import 'package:alcancia_flutter/presentation/sections/home_page.dart';
 import 'package:alcancia_flutter/presentation/sections/login/login_page.dart';
 import 'package:alcancia_flutter/presentation/themes.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: kLightAlcanciaTheme.data,
-        home: LoginPage(),
+        home: HomePage(),
       ),
     );
   }
